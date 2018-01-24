@@ -1,0 +1,14 @@
+@mixin text-regular{
+  font-size:70%;
+  color: $color-text;
+}
+
+@mixin button($color){
+  display: inline-block;
+  line-height:40px;
+  font-size:70%;
+  border:1px solid $color;
+  color: $color;
+  text-transform: uppercase;
+  padding:0 10px;
+}

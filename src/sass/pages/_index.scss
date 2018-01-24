@@ -1,0 +1,85 @@
+section.main-image{
+  height:100vh;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/index/main.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  .left-arrow{
+    left:20px;
+  }
+  .right-arrow{
+    right:20px;
+  }
+  .arrow{
+    position: absolute;
+    top:55%;
+    .fa{
+      border:1px solid white;
+      color: #fff;
+      line-height:50px;
+      width:50px;
+      font-size:30px;
+    }
+  }
+  .main-content{
+    position: absolute;
+    top:50%;
+    left:0;
+    right:0;
+    margin: auto;
+    width:70%;
+    p{
+      @include text-regular;
+      color: #fff;
+      width:70%;
+      margin: 20px auto;
+    }
+  }
+  h1{
+    color: #ffffff;
+    font-size:40px;
+    text-transform: uppercase;
+  }
+  .button{
+    @include button(#fff)
+  }
+}section.main-image{
+  height: 100vh;
+  background: url("../img/main.jpeg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  .left-arrow{
+    position: absolute;
+    top:50%;
+    left:20px ;
+
+  }
+  .right-arrow{
+    position: absolute;
+    top:50%;
+    right:20px ;
+
+  }
+  .main-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+
+    p{
+
+    }
+  }
+  h1{
+font-size: 50px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  .button{
+    @include button(#fff);
+font-size: 30px;
+  }
+}

@@ -1,0 +1,13 @@
+// base
+@import "base/fonts";
+@import "base/reset";
+// utils
+@import "utils/vars";
+@import "utils/media";
+@import "utils/mixins";
+@import "utils/generals";
+// layouts
+@import "layouts/footer";
+@import "layouts/header";
+// pages
+@import "pages/index";
