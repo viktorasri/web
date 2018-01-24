@@ -1,85 +1,169 @@
-section.main-image{
-  height:100vh;
-
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/index/main.jpeg");
+//---------SECTION MAIN-IMMAGE-----------
+section.main-image {
+  padding: 0;
+  height: 100vh;
+  //background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/main1.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  .left-arrow{
-    left:20px;
+  .left-arrow {
+    left: 20px;
   }
-  .right-arrow{
-    right:20px;
+  .right-arrow {
+    right: 20px;
   }
-  .arrow{
+  .arrow {
     position: absolute;
-    top:55%;
-    .fa{
-      border:1px solid white;
-      color: #fff;
-      line-height:50px;
-      width:50px;
-      font-size:30px;
+    top: 55%;
+    border: 1px solid white;
+    color: #fff;
+    padding: 20px 25px;
+    font-size: 30px;
+    transition: .2s;
+    cursor: pointer;
+    &:active{
+      transform: scale(.97);
     }
   }
-  .main-content{
-    position: absolute;
-    top:50%;
-    left:0;
-    right:0;
-    margin: auto;
-    width:70%;
-    p{
-      @include text-regular;
-      color: #fff;
-      width:70%;
-      margin: 20px auto;
-    }
-  }
-  h1{
-    color: #ffffff;
-    font-size:40px;
-    text-transform: uppercase;
-  }
-  .button{
-    @include button(#fff)
-  }
-}section.main-image{
-  height: 100vh;
-  background: url("../img/main.jpeg");
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  .left-arrow{
-    position: absolute;
-    top:50%;
-    left:20px ;
-
-  }
-  .right-arrow{
-    position: absolute;
-    top:50%;
-    right:20px ;
-
-  }
-  .main-content{
+  .main-content {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%,50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 70%;
 
-    p{
-
+    p {
+      @include text-regular;
+      color: #fff;
+      width: 70%;
+      margin: 0 auto 35px auto;
+      line-height: 1.5;
+      transition: 1s;
     }
   }
-  h1{
-font-size: 50px;
+  h1 {
     color: #ffffff;
+    font-size: 50px;
     text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+    transition: 1s;
+
+
   }
-  .button{
-    @include button(#fff);
-font-size: 30px;
+  .button {
+    @include button(#fff)
+  }
+}
+//---------SECTION FEATURES-----------
+section.features{
+  background-color: $color-white;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .wrapper{
+    width: 30%;
+    &:first-of-type{
+      margin-bottom: 65px;
+    }
+  }
+  img{
+    margin-bottom: 25px;
+  }
+  h4{
+    @include wrapper-heading($color-blue);
+  }
+  p{
+    @include text-regular;
+    line-height:2;
+  }
+}
+//---------SECTION RECENT-PROJECTS-----------
+section.recent-projects{
+  background-color: #fff;
+  padding-bottom: 40px;
+  h3{
+    @include section-heading($color-blue);
+    margin-bottom: 25px;
+    &:after{
+      content: '';
+      display: block;
+      width: 68px;
+      border-bottom: 2px solid $color-blue;
+      margin-top: 15px;
+    }
+  }
+  .container{
+    display: flex;
+    justify-content: space-between;
+    &:last-of-type{
+      justify-content: flex-end;
+    }
+  }
+  .wrapper{
+    width: 30%;
+    position: relative;
+    background-color: #0F273C;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 20px;
+    &:hover{
+      i{
+        display: block;
+      }
+      img{
+        opacity: 1;
+        transform: scale(1.15);
+      }
+    }
+    img{
+      width: 100%;
+      opacity: 0.7;
+      transition: .2s;
+    }
+    i{
+      position: absolute;
+      color: #ffffff;
+      font-size: 120%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      display: none;
+      transition: .2s;
+    }
+  }
+  .arrow{
+    @include small-arrow;
+  }
+}
+
+//---------SECTION OUR-RESULTS-----------
+section.our-results{
+  background-color: $color-blue;
+  padding-top: 60px;
+  .container{
+    display: flex;
+  }
+  .wrapper{
+    flex: 1;
+  }
+  .number{
+    color: #fff;
+    font-size:250% ;
+  }
+  h4{
+    @include wrapper-heading(#fff);
+    &:before{
+      content: '';
+      display: block;
+      width: 40px;
+      margin: 20px auto 15px auto;
+      border-bottom: 2px solid #ffffff;
+    }
+
   }
 }

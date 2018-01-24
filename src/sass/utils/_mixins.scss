@@ -1,14 +1,51 @@
 @mixin text-regular{
   font-size:70%;
   color: $color-text;
+  //font-family: 'Open Sans', sans-serif;
 }
 
 @mixin button($color){
   display: inline-block;
-  line-height:40px;
   font-size:70%;
   border:1px solid $color;
   color: $color;
   text-transform: uppercase;
-  padding:0 10px;
+  padding:15px 20px;
+  user-select: none;
+  cursor: pointer;
+  transition: .2s;
+  &:active{
+    transform: scale(.97);
+  }
+}
+@mixin wrapper-heading($color){
+  font-size: 120%;
+  text-transform: uppercase;
+  color: $color;
+  margin-bottom: 25px;
+}
+
+@mixin section-heading($color){
+  font-size: 175%;
+  text-transform: uppercase;
+  color: $color;
+}
+
+@mixin small-arrow{
+  font-size: 75%;
+  color: #ffffff;
+  width: 25px;
+  height: 25px;
+  background-color: $color-blue;
+  margin-left: 3px;
+  line-height: 25px;
+  cursor: pointer;
+  transition: .2s;
+  &:active{
+    transform: scale(.95);
+  }
+  &:hover{
+    background-color: #2291d7;
+  }
+
 }
