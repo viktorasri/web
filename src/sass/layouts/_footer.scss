@@ -1,0 +1,86 @@
+footer{
+  section.stripe{
+    padding: 50px 0;
+    h2{
+      text-align: left;
+    }
+    .button{
+      @include button(#fff)
+    }
+  }
+  section.footer-menu{
+    background-color: $color-dark;
+    padding: 60px 0;
+    .container{
+      display: flex;
+      justify-content: space-between;
+    }
+    .wrapper{
+      width: 23%;
+    }
+    h3{
+      color: $color-blue;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-align: left;
+      margin-bottom: 35px;
+    }
+    li{
+      @include text-regular;
+      color: #ffffff;
+      text-align: left;
+      transition: .2s;
+      &:before{
+        content: '\f054';
+        font-family: FontAwesome;
+        display: inline-block;
+        margin-right: 5px;
+        color: $color-blue;
+      }
+      &:hover{
+        color: #e9e9e9;
+      }
+      &:hover:before{
+        color: #ffffff;
+      }
+    }
+    .address:before{
+      content: '\f041';
+    }
+    .phone:before{
+      content: '\f095';
+    }
+    .e-mail:before{
+      content: '\f003';
+    }
+    p{
+      @include text-regular;
+      color: #ffffff;
+      text-align: left;
+    }
+
+  }
+  section.black-stripe{
+    background-color: #000000;
+    padding: 35px 0;
+  }
+  p{
+    @include text-regular;
+    color: #ffffff;
+  }
+  .fa-heart{
+    color: #ff0000;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,213 @@
+section.who-we-are{
+  .container{
+    display: flex;
+  }
+  .image-container{
+    flex: 1;
+    img{
+      width: 100%;
+    }
+  }
+  .left-side{
+    flex: 1;
+    padding-left: 30px;
+    text-align: left;
+    h2{
+      @include section-heading($color-blue);
+      text-align: left;
+      margin-bottom: 40px;
+    }
+    p{
+      @include text-regular;
+      text-align: justify;
+      line-height: 2;
+      margin-bottom: 40px;
+    }
+    .button{
+      @include button($color-blue);
+      color: #ffffff;
+      background-color: $color-blue;
+    }
+  }
+}
+section.about-us-features{
+  background-color: $color-dark;
+  .container{
+    display: flex;
+    justify-content: space-between;
+  }
+  .wrapper{
+    width: 31%;
+  }
+  .circle{
+    width: 130px;
+    height: 130px ;
+    border-radius: 50%;
+    border: 4px solid $color-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto 20px auto;
+  }
+  .fa{
+   color: #ffffff;
+   font-size: 35px;
+  }
+  h3{
+    @include wrapper-heading(#fff);
+    margin-bottom: 20px;
+  }
+  p{
+    @include text-regular;
+    color: #ffffff;
+  }
+}
+section.about-us-more{
+  .container{
+    display: flex;
+  }
+  .why-choose-us,
+  .what-we-do{
+    flex: 1;
+  }
+  .what-we-do{
+    padding-left: 15px;
+    p{
+      @include text-regular;
+      text-align: justify;
+    }
+  }
+  .why-choose-us{
+    padding-right: 15px;
+  }
+  h2{
+    @include section-heading($color-blue);
+    margin-bottom: 45px;
+  }
+  .we-are-creative{
+    display: flex;
+    color: #ffffff;
+    .fa{
+      width: 60px;
+      height: 60px;
+      background-color: $color-blue;
+      font-size: 70%;
+      line-height: 60px;
+    }
+    p{
+      background-color: $color-dark;
+      height: 60px;
+      line-height: 60px;
+      padding-left: 10px;
+      display: block;
+      flex: 1;
+      text-align: left;
+    }
+  }
+  .text-with-border{
+    @include text-regular;
+    padding: 20px;
+    border: 1px solid $colore-border;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  li{
+    @include text-regular;
+    height: 60px;
+    border: 1px solid $colore-border;
+    text-align: left;
+    margin-bottom: 10px;
+    line-height: 60px;
+    ;
+    &:before{
+      content: '\f054';
+      font-family: FontAwesome;
+      height: 60px;
+      width: 60px;
+      border: 1px solid $colore-border;
+      display: inline-block;
+      margin-right: 10px;
+      text-align: center;
+      color: $color-blue;
+    }
+  }
+}
+section.customer-testimonials{
+  background-color: $color-dark;
+  h2{
+    @include section-heading(#fff);
+    margin-bottom: 45px;
+  }
+  .feadback-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  .image-container{
+    flex: 1;
+  }
+  img{
+    width: 130px;
+    height: 130px;
+    position: center;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  p{
+    @include text-regular;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 40px;
+    border-left: 1px solid #ffffff;
+    display: inline-block;
+    flex: 2;
+  }
+  .control-bar{
+    text-align: center;
+  }
+  .circle{
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    display: inline-block;
+    margin: 0 3px;
+    cursor: pointer;
+  }
+}
+
+section.our-team{
+  h2{
+    @include section-heading($color-blue)
+    margin-bottom: 45px;
+    text-align: left;
+  }
+  .wrapper-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .wrapper{
+    width: 22.3%;
+
+  }
+  img{
+    width: 100%;
+    position: center;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  h3{
+    font-size: 120%;
+    text-transform: capitalize;
+    color: #4B4B4B;
+
+    span{
+      margin-top: 10px;
+      font-size: 50%;
+      display: block;
+    }
+  }
+
+}
+

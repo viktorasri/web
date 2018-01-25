@@ -17,3 +17,23 @@ body{
 section{
     padding: 80px 0;
 }
+section.stripe {
+    background-color: $color-blue;
+    padding:25px 0;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h2{
+        font-size: 120%;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+    nav{
+        font-size: 70%;
+        line-height: 24px;
+        text-transform: capitalize;
+        color: #ffffff;
+    }
+}

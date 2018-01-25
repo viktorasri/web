@@ -1,6 +1,7 @@
 @mixin text-regular{
   font-size:70%;
   color: $color-text;
+  line-height: 2;
   //font-family: 'Open Sans', sans-serif;
 }
 

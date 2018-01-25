@@ -39,7 +39,6 @@ section.main-image {
       color: #fff;
       width: 70%;
       margin: 0 auto 35px auto;
-      line-height: 1.5;
       transition: 1s;
     }
   }
@@ -79,7 +78,6 @@ section.features{
   }
   p{
     @include text-regular;
-    line-height:2;
   }
 }
 //---------SECTION RECENT-PROJECTS-----------

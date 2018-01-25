@@ -80,6 +80,7 @@
     <div class="container">
         <div class="wrapper">
             <div class="number">456</div>
+<!--            padaryti uzsikrovima po 50 +50 +50  + + + + + +-->
             <h4>happy clients</h4>
         </div>
         <div class="wrapper">
@@ -96,9 +97,25 @@
         </div>
     </div>
 </section>
+<section class="blog-posts">
+    <div class="container">
+        <h3>from blog</h3>
+        <div class="post-container">
+            <div class="post"></div>
+            <div class="post"></div>
+        </div>
+        <nav>
+            <div class="arrow-left"></div>
+            <div class="arrow-right"></div>
+        </nav>
+    </div>
 
 
 
+</section>
+
+
+<?php include('parts/footer.php')?>
 
   <script src="script.js"></script>
 </body>
