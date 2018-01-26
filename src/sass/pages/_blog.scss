@@ -1,33 +1,8 @@
 section.blog-body{
 
   .blog-content{
-    width: 63%;
-    float: left;
     .blog-post{
       margin-bottom: 80px;
-    }
-    .image-container{
-      position: relative;
-      margin-bottom: 30px;
-    }
-    img{
-      width: 100%;
-    }
-    .date-stamp{
-      text-align: left;
-      font-weight: 300;
-      font-size: 70%;
-      padding: 15px 6px;
-      background-color: $color-blue;
-      color: #ffffff;
-      position: absolute;
-      left: 0;
-      bottom: 40px;
-      span{
-        text-transform: uppercase;
-        display: block;
-        margin-bottom: 5px;
-      }
     }
     p{
       @include text-regular;
@@ -46,7 +21,6 @@ section.blog-body{
       border: 1px solid $color-blue;
       background-color: transparent;
       color: $color-text;
-      box-sizing: border-box;
     }
     nav{
       .fa-chevron-left{
@@ -63,9 +37,6 @@ section.blog-body{
     text-align: left;
     font-weight: 600;
   }
-  .right-side-bar{
-    width: 37%;
-    float: right;
-  }
+
 
 }

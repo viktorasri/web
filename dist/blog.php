@@ -14,7 +14,7 @@
         <div class="blog-content">
 
             <div class="blog-post clearfix">
-                <div class="image-container">
+                <div class="blog-image-container">
                     <img src="img/blog/blog1.jpeg" alt="blog picture">
                     <div class="date-stamp"><span>DATE</span>March 24, 2017</div>
                 </div>
@@ -24,8 +24,8 @@
             </div>
 
             <div class="blog-post clearfix">
-                <div class="image-container">
-                    <img src="img/blog/blog1.jpeg" alt="blog picture">
+                <div class="blog-image-container">
+                    <img src="img/blog/blog2.jpeg" alt="blog picture">
                     <div class="date-stamp"><span>DATE</span>March 24, 2017</div>
                 </div>
                 <h2>Looking for Developers? Try This Geeky Communityy</h2>
@@ -34,8 +34,8 @@
             </div>
 
             <div class="blog-post clearfix">
-                <div class="image-container">
-                    <img src="img/blog/blog1.jpeg" alt="blog picture">
+                <div class="blog-image-container">
+                    <img src="img/blog/blog3.jpeg" alt="blog picture">
                     <div class="date-stamp"><span>DATE</span>March 24, 2017</div>
                 </div>
                 <h2>How to Spend Less Than an Hour a Day on Email Marketing</h2>
@@ -48,12 +48,10 @@
                 <div class="nav-page-number">2</div>
                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
             </nav>
-
-
-
         </div>
-        <div class="right-side-bar">
 
+        <div class="right-side-bar">
+            <?php include('parts/blog-right-sidebar.php') ?>
         </div>
     </div>
 

@@ -1,0 +1,92 @@
+section.blog-full-body{
+  text-align: left;
+  h1,
+  h2{
+    font-size: 120%;
+    color: $color-dark;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  h2{
+    color: $color-blue;
+    text-transform: uppercase;
+    margin-top: 45px;
+    margin-bottom: 10px;
+
+  }
+  h3{
+    @include text-regular;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  p{
+    @include text-regular;
+    margin-bottom: 40px;
+    span{
+      color: #ff4242;
+    }
+  }
+  h6{
+    @include text-regular;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    color: $color-blue;
+    margin-right: 5px;
+  }
+  .social-button{
+    width: 100px;
+    height: 35px;
+    font-size: 70%;
+    line-height: 35px;
+    color: #ffffff;
+    display: inline-block;
+    text-align: center;
+    margin-left: 5px;
+  }
+  .facebook{
+    background-color: #2f6ae0;
+  }
+  .twitter{
+    background-color: #0ea9fd;
+  }
+  .gplus{
+    background-color: #c73252;
+  }
+  .instagram{
+    background-color: #595959;
+  }
+  .input-container{
+    display: flex;
+    justify-content: space-between;
+  }
+  input[type=text],
+  input[type=email],
+  textarea{
+    border: 1px solid $colore-border;
+    @include text-regular;
+    padding: 15px 20px;
+  }
+  input[type=text],
+  input[type=email]{
+    width: 32%;
+    margin-bottom: 15px;
+  }
+  textarea{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  input[type=submit]{
+    @include button($color-blue);
+    background-color: $color-blue;
+    color: #ffffff;
+    padding: 10px 12px;
+  }
+
+
+
+}

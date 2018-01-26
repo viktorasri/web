@@ -1,7 +1,9 @@
+*{box-sizing: border-box;}
 body{
     text-align: center;
     background: #fff;
     font-size: 20px;
+
 }
 
 .container{
@@ -61,5 +63,12 @@ section.stripe {
     }
 }
 
-
+.right-side-bar{
+    width: 35%;
+    float: right;
+}
+.blog-content {
+    width: 65%;
+    float: left;
+}
 

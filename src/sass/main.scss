@@ -9,9 +9,12 @@
 // layouts
 @import "layouts/footer";
 @import "layouts/header";
+@import "layouts/blog-right-sidebar";
+@import "layouts/blog-main-img";
+
 // pages
 @import "pages/index";
-@import "pages/news";
+@import "pages/blog_full_post";
 @import "pages/about";
 @import "pages/blog";
 @import "pages/contacts";
