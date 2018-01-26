@@ -23,39 +23,39 @@
     <div class="container">
         <div class="wrapper">
             <img src="img/home-icon1.png" alt="features icon">
-            <h4>Nibh Ridiculus</h4>
+            <h3>Nibh Ridiculus</h3>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus etmagnis dis parturie nt montes, nascetur.</p>
         </div>
         <div class="wrapper">
             <img src="img/home-icon2.png" alt="features icon">
-            <h4>Nibh Ridiculus</h4>
+            <h3>Nibh Ridiculus</h3>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus etmagnis dis parturie nt montes, nascetur.</p>
         </div>
         <div class="wrapper">
             <img src="img/home-icon3.png" alt="features icon">
-            <h4>Nibh Ridiculus</h4>
+            <h3>Nibh Ridiculus</h3>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus etmagnis dis parturie nt montes, nascetur.</p>
         </div>
         <div class="wrapper">
             <img src="img/home-icon4.png" alt="features icon">
-            <h4>Nibh Ridiculus</h4>
+            <h3>Nibh Ridiculus</h3>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus etmagnis dis parturie nt montes, nascetur.</p>
         </div>
         <div class="wrapper">
             <img src="img/home-icon5.png" alt="features icon">
-            <h4>Nibh Ridiculus</h4>
+            <h3>Nibh Ridiculus</h3>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus etmagnis dis parturie nt montes, nascetur.</p>
         </div>
         <div class="wrapper">
             <img src="img/home-icon6.png" alt="features icon">
-            <h4>Nibh Ridiculus</h4>
+            <h3>Nibh Ridiculus</h3>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus etmagnis dis parturie nt montes, nascetur.</p>
         </div>
     </div>
 </section>
 <section class="recent-projects">
     <div class="container">
-        <h3>Recent projects</h3>
+        <h2>Recent projects</h2>
     </div>
     <div class="container">
         <div class="wrapper">
@@ -71,42 +71,61 @@
             <i><i class="fa fa-search-plus" aria-hidden="true"></i></i>
         </div>
     </div>
-    <div class="container">
-        <div class="arrow"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
-        <div class="arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-    </div>
+    <nav class="small-chevrons-container">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    </nav>
 </section>
 <section class="our-results">
     <div class="container">
         <div class="wrapper">
             <div class="number">456</div>
 <!--            padaryti uzsikrovima po 50 +50 +50  + + + + + +-->
-            <h4>happy clients</h4>
+            <h3>happy clients</h3>
         </div>
         <div class="wrapper">
             <div class="number">156</div>
-            <h4>Projects</h4>
+            <h3>Projects</h3>
         </div>
         <div class="wrapper">
             <div class="number">100%</div>
-            <h4>Success rate</h4>
+            <h3>Success rate</h3>
         </div>
         <div class="wrapper">
             <div class="number">99</div>
-            <h4>countries</h4>
+            <h3>countries</h3>
         </div>
     </div>
 </section>
 <section class="blog-posts">
     <div class="container">
-        <h3>from blog</h3>
+        <h2>from blog</h2>
         <div class="post-container">
-            <div class="post"></div>
-            <div class="post"></div>
+            <div class="post">
+                <div class="image-container">
+                    <img src="img/alexis%20simpson.jpg" alt="reacent posts">
+                </div>
+                <div class="post-text">
+                    <div class="date">23 Oct 2017</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eveniet non quis vero voluptatibus voluptatum?</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="image-container">
+                    <img src="img/alexis%20simpson.jpg" alt="reacent posts">
+                </div>
+                <div class="post-text">
+                    <div class="date">23 Oct 2017</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eveniet non quis vero voluptatibus voluptatum?</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
         </div>
-        <nav>
-            <div class="arrow-left"></div>
-            <div class="arrow-right"></div>
+        <nav class="small-chevrons-container">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
         </nav>
     </div>
 
@@ -117,6 +136,6 @@
 
 <?php include('parts/footer.php')?>
 
-  <script src="script.js"></script>
+
 </body>
 </html>

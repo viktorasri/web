@@ -30,6 +30,19 @@
   font-size: 175%;
   text-transform: uppercase;
   color: $color;
+  text-align: left;
+}
+
+@mixin section-heading-underlined{
+  @include section-heading($color-blue);
+  margin-bottom: 25px;
+  &:after{
+    content: '';
+    display: block;
+    width: 70px;
+    border-bottom: 2px solid $color-blue;
+    margin-top: 15px;
+  }
 }
 
 @mixin small-arrow{
@@ -42,11 +55,8 @@
   line-height: 25px;
   cursor: pointer;
   transition: .2s;
+  user-select: none;
   &:active{
     transform: scale(.95);
   }
-  &:hover{
-    background-color: #2291d7;
-  }
-
 }

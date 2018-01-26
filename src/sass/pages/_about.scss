@@ -14,13 +14,12 @@ section.who-we-are{
     text-align: left;
     h2{
       @include section-heading($color-blue);
-      text-align: left;
       margin-bottom: 40px;
     }
     p{
       @include text-regular;
       text-align: justify;
-      line-height: 2;
+
       margin-bottom: 40px;
     }
     .button{
@@ -137,6 +136,7 @@ section.customer-testimonials{
   h2{
     @include section-heading(#fff);
     margin-bottom: 45px;
+    text-align: center;
   }
   .feadback-container{
     display: flex;
@@ -147,8 +147,8 @@ section.customer-testimonials{
     flex: 1;
   }
   img{
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
     position: center;
     object-fit: cover;
     border-radius: 50%;
@@ -180,7 +180,7 @@ section.our-team{
   h2{
     @include section-heading($color-blue)
     margin-bottom: 45px;
-    text-align: left;
+
   }
   .wrapper-container{
     display: flex;
@@ -193,15 +193,12 @@ section.our-team{
   }
   img{
     width: 100%;
-    position: center;
-    object-fit: cover;
     margin-bottom: 20px;
   }
   h3{
     font-size: 120%;
     text-transform: capitalize;
     color: #4B4B4B;
-
     span{
       margin-top: 10px;
       font-size: 50%;

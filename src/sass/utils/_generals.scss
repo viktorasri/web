@@ -7,6 +7,21 @@ body{
 .container{
     max-width: 1180px;
     margin: auto;
+    padding: 0 10px;
+    @include mobile{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.small-chevrons-container{
+    display: flex;
+    max-width: 1180px;
+    margin: auto;
+    justify-content: flex-end;
+    .fa{
+        @include small-arrow;
+    }
 }
 
 .clearfix:after{
@@ -37,3 +52,14 @@ section.stripe {
         color: #ffffff;
     }
 }
+
+.active-menu{
+    flex-wrap: wrap;
+    nav{
+        display: block!important;
+        width: 100%;
+    }
+}
+
+
+

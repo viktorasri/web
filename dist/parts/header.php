@@ -20,6 +20,7 @@
   <div class="navigation-menu">
       <div class="container">
           <img src="img/logo.png" alt="">
+          <i class="fa fa-bars mobile-nav" aria-hidden="true"></i>
           <nav>
               <a href="index.php">Home</a>
               <a href="about.php">About us</a>
@@ -29,6 +30,7 @@
               <a href="contacts.php">contact us</a>
               <a href="news.php">news</a>
           </nav>
+
       </div>
 
   </div>
