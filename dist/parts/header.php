@@ -8,12 +8,12 @@
             <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
         </div>
         <div class="contacts">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <p>Mon - Sat: 7:00 - 17:00</p>
-            <i class="fa fa-phone" aria-hidden="true"></i>
-            <a href="tel:+386401115555">+ 386 40 111 5555</a>
-            <i class="fa fa-envelope-o" aria-hidden="true"></i>
-            <a href="mailto:info@yourdomain.com">info@yourdomain.com</a>
+            <p><i class="fa fa-clock-o" aria-hidden="true"></i>Mon - Sat: 7:00 - 17:00</p>
+
+            <a href="tel:+386401115555"><i class="fa fa-phone" aria-hidden="true"></i><p>+ 386 40 111 5555</p></a>
+
+            <a href="mailto:info@yourdomain.com"><i class="fa fa-envelope-o" aria-hidden="true"></i><p>info@yourdomain.com</p></a>
+
         </div>
     </div>
   </div>
@@ -28,7 +28,6 @@
               <a href="projects.php">Projects</a>
               <a href="blog.php">Blog</a>
               <a href="contacts.php">contact us</a>
-              <a href="news.php">news</a>
           </nav>
 
       </div>

@@ -10,10 +10,7 @@ body{
     max-width: 1180px;
     margin: auto;
     padding: 0 10px;
-    @include mobile{
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+
 }
 
 .small-chevrons-container{
@@ -33,23 +30,39 @@ body{
 }
 section{
     padding: 80px 0;
+    @include tablet-landscape{
+        padding: 60px 0;
+    }
+    @include mobile{
+        padding: 40px 0;
+    }
 }
 section.stripe {
     background-color: $color-blue;
     padding:25px 0;
+    @include mobile{
+        padding: 15px 0;
+    }
     .container{
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     h2{
-        font-size: 120%;
+        font-size: 24px;
         text-transform: uppercase;
         color: #ffffff;
+        @include tablet-landscape{
+           font-size: 22px;
+           text-align: center!important;
+        }
+        @include mobile{
+            font-size: 20px;
+        }
     }
     nav{
-        font-size: 70%;
-        line-height: 24px;
+        @include text-regular;
+        //line-height: 24px;
         text-transform: capitalize;
         color: #ffffff;
     }

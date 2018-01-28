@@ -3,25 +3,75 @@ header{
   @include text-regular;
 
   .container {
-    padding: 19px 0;
     display: flex;
     justify-content: space-between;
+    padding: 20px 10px;
+    align-items: center;
+    @include tablet-portrait{
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    @include mobile{
+      padding: 10px 10px;
+    }
   }
+
   .contacts-menu{
     box-shadow: 0 1px 5px 0 #f2f2f2;
     .social{
       i{
         margin-right: 13px;
       }
+      @include tablet-portrait{
+        flex: 1 100%;
+      }
+      @include mobile{
+        flex: none;
+      }
     }
     .contacts{
       i{
         margin-right: 7px;
         margin-left: 40px;
+        @include tablet-portrait{
+          margin-left: 0;
+        }
+        @include mobile{
+          margin:0 0 0 13px;
+        }
       }
       p{
         display: inline-block;
+        @include mobile{
+          display: none;
+        }
       }
+      @include tablet-portrait{
+        flex: 1 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+      @include mobile{
+        flex: none;
+      }
+    }
+  }
+  img{
+    @include tablet-landscape{
+      height: 80px;
+    }
+    @include tablet-portrait{
+      height: 55px;
+      margin: 10px 0;
+    }
+  }
+  .mobile-nav{
+    display: none;
+    color: $color-text;
+    font-size: 35px;
+    cursor: pointer;
+    @include mobile{
+      display: inline-block;
     }
   }
 
@@ -29,30 +79,20 @@ header{
     a{
       margin-left: 30px;
       text-transform: uppercase;
-      line-height: 99px;
       transition: .2s;
       &:hover{
         color: $color-blue;
       }
+      @include tablet-portrait{
+        margin-left: 8px;
+        font-size: 13px;
+      }
     }
-  }
-  img{
-    margin: 10px 0;
-    @include tablet-landscape{
-      width: 200px;
-      height: auto;
-    }
-    @include tablet-portrait{
-      width: 150px;
-      height: auto;
-    }
-  }
-  .mobile-nav{
-    display: none;
     @include mobile{
-      display: inline-block;
+      display: none;
     }
   }
+
 }
 
 

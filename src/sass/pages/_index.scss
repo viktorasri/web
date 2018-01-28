@@ -9,9 +9,15 @@ section.main-image {
   position: relative;
   .left-arrow {
     left: 20px;
+    @include tablet-portrait{
+      left: 0;
+    }
   }
   .right-arrow {
     right: 20px;
+    @include tablet-portrait{
+      right: 0;
+    }
   }
   .arrow {
     position: absolute;
@@ -22,9 +28,20 @@ section.main-image {
     font-size: 30px;
     transition: .2s;
     cursor: pointer;
+    z-index: 9999;
     &:active{
       transform: scale(.97);
     }
+    @include tablet-portrait{
+      border: none;
+      top: 60%;
+    }
+    @include mobile{
+      font-size: 20px;
+      padding: 10px;
+      top: 52%;
+    }
+
   }
   .main-content {
     position: absolute;
@@ -32,7 +49,10 @@ section.main-image {
     left: 0;
     right: 0;
     margin: auto;
-    width: 70%;
+    width: 71%;
+    @include tablet-portrait{
+      width: 77%;
+    }
 
     p {
       @include text-regular;
@@ -40,6 +60,12 @@ section.main-image {
       width: 70%;
       margin: 0 auto 35px auto;
       transition: 1s;
+      @include tablet-portrait{
+        width: 90%;
+      }
+      @include mobile{
+        display: none;
+      }
     }
   }
   h1 {
@@ -49,11 +75,24 @@ section.main-image {
     font-family: 'Raleway', sans-serif;
     margin-bottom: 20px;
     transition: 1s;
+    @include tablet-landscape{
+      font-size: 45px;
+    }
+    @include tablet-portrait{
+      font-size: 40px;
+    }
+    @include mobile{
+      font-size: 35px;
+      margin-bottom: 50px;
+    }
 
 
   }
   .button {
     @include button(#fff)
+    @include mobile{
+      width: 70%;
+    }
   }
 }
 //---------SECTION FEATURES-----------
@@ -66,12 +105,35 @@ section.features{
   }
   .wrapper{
     width: 30%;
+    @include tablet-portrait{
+      width: 47%;
+    }
+    @include mobile{
+      width: 100%;
+      margin-bottom: 35px!important;
+    }
     &:first-of-type{
       margin-bottom: 65px;
+      @include tablet-portrait{
+        margin-bottom: 55px;
+      }
     }
+    &:nth-of-type(3){
+      @include tablet-portrait{
+        margin-bottom: 55px;
+      }
+    }
+    &:last-of-type{
+      margin-bottom: 0!important;
+    }
+
   }
   img{
     margin-bottom: 25px;
+    @include tablet-portrait{
+      height: 35px;
+      margin-bottom: 20px;
+    }
   }
   h3{
     @include wrapper-heading($color-blue);
@@ -90,15 +152,21 @@ section.recent-projects{
   .container{
     display: flex;
     justify-content: space-between;
+    @include mobile{
+      flex-wrap: wrap;
+    }
   }
 
   .wrapper{
-    width: 30%;
+    width: 31%;
     position: relative;
     background-color: #0F273C;
     overflow: hidden;
     cursor: pointer;
     margin-bottom: 20px;
+    @include mobile{
+      width: 100%;
+    }
     img{
       width: 100%;
       opacity: 0.7;
@@ -125,30 +193,63 @@ section.recent-projects{
       }
     }
   }
+  .small-chevrons-container {
+    margin: 0;
+    width: 100%;
+    i{
+      float: right;
+    }
+  }
 }
 
 //---------SECTION OUR-RESULTS-----------
 section.our-results{
   background-color: $color-blue;
-  padding-top: 60px;
+  //padding-top: 60px;
+  @include tablet-portrait{
+    margin-bottom: 0;
+  }
   .container{
     display: flex;
+    @include tablet-portrait{
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
   .wrapper{
     flex: 1;
+    @include tablet-portrait{
+      flex: 1 50%;
+    }
+    &:first-of-type{
+    margin-bottom: 60px;
+  }
   }
   .number{
     color: #fff;
-    font-size:250% ;
+    font-size:50px ;
+    @include tablet-portrait{
+      font-size: 45px;
+    }
+    @include mobile{
+      font-size: 40px;
+    }
   }
   h3{
     @include wrapper-heading(#fff);
+    @include mobile{
+      font-size: 19px;
+    }
     &:before{
       content: '';
       display: block;
       width: 40px;
       margin: 20px auto 15px auto;
       border-bottom: 2px solid #ffffff;
+      @include mobile{
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
     }
 
   }
@@ -164,14 +265,28 @@ section.blog-posts{
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    @include tablet-portrait{
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
   }
   .post{
     width: 48%;
     background-color: #f8f8f8;
     display: flex;
+    @include tablet-portrait{
+      width: 100%;
+      margin-bottom: 25px;
+    }
+    @include mobile{
+      flex-wrap: wrap;
+    }
   }
   .image-container{
     flex: 1;
+    @include mobile{
+      flex: 1 100%;
+    }
     img{
       width: 100%;
       position: center;
@@ -181,28 +296,30 @@ section.blog-posts{
   }
   .post-text{
     flex: 2;
-    padding: 30px 20px;
+    padding: 0 20px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
   }
   .date{
     text-align: left;
     @include text-regular;
     font-style: italic;
+    margin-top: 20px;
   }
   p{
     @include text-regular;
     text-align: left;
   }
-  a{
-    right: 20px;
-    bottom: 30px;
-    position: absolute;
-    font-size: 70%;
-    text-transform: uppercase;
-    color: $color-blue;
-    font-weight: 600;
-  ;
+  .button{
+    @include button($color-blue);
+    border: none;
+    padding: 0;
+    text-align: right;
+    margin-bottom: 20px;
+
   }
 }
 

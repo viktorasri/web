@@ -39,7 +39,7 @@
 
             <div class="wrapper">
                 <h3>Get IN TOUCH </h3>
-                <p>Lorem Ipsum is simply dummy text of the
+                <p class="for-media">Lorem Ipsum is simply dummy text of the
                     printing and typesetting industry. </p>
                     <ul>
                         <li class="address"><a href="https://www.google.com/maps">84 Street, City, State 24813</a></li>

@@ -71,10 +71,12 @@
             <i><i class="fa fa-search-plus" aria-hidden="true"></i></i>
         </div>
     </div>
-    <nav class="small-chevrons-container">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-    </nav>
+    <div class="container ">
+        <nav class="small-chevrons-container clearfix">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </nav>
+    </div>
 </section>
 <section class="our-results">
     <div class="container">
@@ -108,7 +110,7 @@
                 <div class="post-text">
                     <div class="date">23 Oct 2017</div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eveniet non quis vero voluptatibus voluptatum?</p>
-                    <a href="#">Read more</a>
+                    <div class="button">Read more</div>
                 </div>
             </div>
 
@@ -119,7 +121,7 @@
                 <div class="post-text">
                     <div class="date">23 Oct 2017</div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eveniet non quis vero voluptatibus voluptatum?</p>
-                    <a href="#">Read more</a>
+                    <div class="button">Read more</div>
                 </div>
             </div>
         </div>
