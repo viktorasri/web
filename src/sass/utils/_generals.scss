@@ -68,20 +68,66 @@ section.stripe {
     }
 }
 
-.active-menu{
-    flex-wrap: wrap;
-    nav{
-        display: block!important;
-        width: 100%;
-    }
-}
 
+//---------BlOG---------------
 .right-side-bar{
     width: 35%;
     float: right;
+    @include tablet-landscape{
+        width: 45%;
+    }
+    @include tablet-portrait{
+        width: 40%;
+    }
+    @include mobile{
+        width: 100%;
+    }
 }
 .blog-content {
     width: 65%;
     float: left;
+    @include tablet-landscape{
+        width: 55%;
+    }
+    @include tablet-portrait{
+        width: 60%;
+    }
+    @include mobile{
+        width: 100%;
+    }
 }
 
+.blog-image-container{
+    position: relative;
+    margin-bottom: 30px;
+    @include tablet-portrait{
+        margin-bottom: 15px;
+    }
+    img{
+        width: 100%;
+        max-height: 350px;
+        object-fit: cover;
+        object-position: center;
+    }
+    .date-stamp{
+        text-align: left;
+        font-weight: 300;
+        font-size: 14px;
+        padding: 15px 6px;
+        background-color: $color-blue;
+        color: #ffffff;
+        position: absolute;
+        left: 0;
+        bottom: 40px;
+        @include mobile{
+            font-size: 12px;
+            padding: 10px 4px;
+
+        }
+        span{
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+}

@@ -89,7 +89,7 @@ section.main-image {
 
   }
   .button {
-    @include button(#fff)
+    @include button(#fff);
     @include mobile{
       width: 70%;
     }

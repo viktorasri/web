@@ -12,6 +12,8 @@
 <section class="projects-recent-projects">
     <div class="container">
         <h1>Recent PROJECTS</h1>
+        <i class="fa fa-filter" aria-hidden="true"></i>
+        <div class="clearfix"></div>
         <nav>
             <a href="#">All</a>/<a href="">Web</a>/<a href="">HTML</a>/<a href="">Wordpress</a>/<a href="">UI</a>
         </nav>

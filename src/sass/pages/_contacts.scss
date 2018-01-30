@@ -9,7 +9,7 @@ section.contact-form{
     border: 1px solid $colore-border;
     padding: 15px 20px;
     @include text-regular;
-    @include mobile{
+    @include tablet-portrait{
       padding: 10px 15px;
     }
   }

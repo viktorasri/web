@@ -1,19 +1,29 @@
 section.projects-recent-projects{
+  padding-bottom: 45px;
   .container{
     display: block;
   }
   h1{
     @include section-heading-underlined;
-    margin-bottom: 20px;
+
   }
   nav{
     margin-bottom: 40px;
     text-align: right;
+    @include tablet-portrait{
+      margin-bottom: 15px;
+    }
+    @include mobile{
+      display: none;
+    }
     a{
       padding: 5px;
       margin: 0 25px;
       transition: .2s;
       @include text-regular;
+      @include tablet-portrait{
+        margin: 0 15px;
+      }
       &:hover{
         border-bottom: 2px solid $color-blue;
       }
@@ -30,9 +40,32 @@ section.projects-recent-projects{
     margin: 0;
     padding:15px;
     box-sizing: border-box;
+    @include tablet-portrait{
+      width: 50%;
+    }
+    @include mobile{
+      width: 100%;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    &:last-of-type{
+      @include mobile{
+        margin-bottom: 0;
+      }
+    }
   }
   img{
     width: 100%;
+  }
+  .fa-filter{
+    display: none;
+    font-size: 20px;
+    padding: 0 15px 15px 15px;
+    color: $color-text;
+    float: right;
+    @include mobile{
+      display: inline-block;
+    }
   }
 }
 

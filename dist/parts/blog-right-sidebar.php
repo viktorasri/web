@@ -1,5 +1,5 @@
 <section class="blog-sidebar-right">
-    <input type="text" placeholder="&#xF002">
+    <input class="blog-search" type="text" placeholder="&#xF002">
     <h3>Recent Posts</h3>
     <div class="recent-post clearfix">
         <img src="img/blog/blog1.jpeg" alt="blog picture">

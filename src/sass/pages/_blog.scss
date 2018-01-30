@@ -1,20 +1,45 @@
 section.blog-body{
 
   .blog-content{
+    .container{
+      @include mobile{
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
     .blog-post{
       margin-bottom: 80px;
+      @include tablet-landscape{
+        margin-bottom: 60px;
+      }
+      @include tablet-portrait{
+        margin-bottom: 40px;
+      }
     }
     p{
       @include text-regular;
       text-align: left;
       margin-bottom: 15px;
       line-height: 1.5;
+      @include mobile{
+        margin-bottom: 5px;
+        text-align: justify;
+      }
     }
     .button{
       @include button($color-blue);
       background-color: $color-blue;
       color: #ffffff;
       float: right;
+      @include tablet-portrait{
+        padding: 10px 15px;
+      }
+      @include mobile{
+        color: $color-blue;
+        background-color: #ffffff;
+        border: none;
+        font-weight: bold;
+      }
     }
     .nav-page-number{
       @include small-arrow;
@@ -36,6 +61,10 @@ section.blog-body{
     margin-bottom: 25px;
     text-align: left;
     font-weight: 600;
+    @include tablet-portrait{
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
   }
 
 

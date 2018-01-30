@@ -1,5 +1,17 @@
 section.blog-sidebar-right{
   padding: 0 0 0 50px;
+  @include tablet-landscape{
+    padding-left: 40px;
+  }
+  @include tablet-portrait{
+    padding-left: 30px;
+  }
+  @include mobile{
+    padding: 30px 0 0 0;
+    margin-top: 30px;
+    border-top: 2px solid $colore-border;
+
+  }
   .recent-post{
     text-align: left;
     line-height: 1.5;
@@ -15,28 +27,41 @@ section.blog-sidebar-right{
       vertical-align: middle;
       float: left;
       margin-right: 20px;
+      @include tablet-portrait{
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+      }
     }
 
   }
-  input{
+  .blog-search{
     border: none;
     background-color: #ebebeb;
     width: 100%;
     padding: 15px 10px;
     @include text-regular;
     margin-bottom: 25px;
+    @include tablet-portrait{
+      padding: 10px 10px;
+    }
     &::placeholder{
       text-transform: capitalize;
       font-family: FontAwesome;
     }
   }
   h3{
-    font-size: 120%;
+    font-size: 24px;
     color: $color-text;
     text-align: left;
     text-transform: capitalize;
     font-weight: bold;
     margin-bottom: 30px;
+    @include tablet-portrait{
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
     &:last-of-type{
       margin-bottom: 15px;
     }
@@ -49,6 +74,9 @@ section.blog-sidebar-right{
     @include text-regular;
     text-transform: uppercase;
     font-weight: bold;
+    @include tablet-portrait{
+      font-size: 13px;
+    }
   }
   .projects-container{
     display: flex;
@@ -59,6 +87,11 @@ section.blog-sidebar-right{
   .wrapper{
     flex: 1 50%;
     box-sizing: border-box;
+    @include tablet-portrait{
+      flex: 1 100%;
+      padding: 0!important;
+      margin-bottom: 15px;
+    }
     &:nth-of-type(1){
       padding: 0 $padding-gallery $padding-gallery 0;
     }
@@ -68,8 +101,11 @@ section.blog-sidebar-right{
     &:nth-of-type(3){
       padding: $padding-gallery $padding-gallery 0 0;
     }
-    &:nth-of-type(4){
+    &:last-of-type{
       padding: $padding-gallery 0 0 $padding-gallery;
+      @include tablet-portrait{
+        margin-bottom: 0;
+      }
     }
   }
   img{

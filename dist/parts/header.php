@@ -21,7 +21,7 @@
       <div class="container">
           <img src="img/logo.png" alt="">
           <i class="fa fa-bars mobile-nav" aria-hidden="true"></i>
-          <nav>
+          <nav class="js-mainnav">
               <a href="index.php">Home</a>
               <a href="about.php">About us</a>
               <a href="pages.php">Pages</a>
