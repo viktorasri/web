@@ -19,7 +19,7 @@
   </div>
   <div class="navigation-menu">
       <div class="container">
-          <img src="img/logo.png" alt="">
+          <a href="index.php"><img src="img/logo.png" alt="company logo"></a>
           <i class="fa fa-bars mobile-nav" aria-hidden="true"></i>
           <nav class="js-mainnav">
               <a href="index.php">Home</a>

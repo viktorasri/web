@@ -1,24 +1,35 @@
+const menuBtn=document.querySelector(".mobile-nav");
 
-function getExist(x) {
-    if (!x) return;
 
+function imagePreloader(arr) {
+    $.preloadImages = function() {
+        for (var i = 0; i < arguments.length; i++) {
+            $("<img />").attr("src", arguments[i]);
+        }
+    }
+   arr.forEach(img => $.preloadImages(img));
 }
-function mainPhoto() {
-    const mainArrowLeft=document.querySelector('.main-image .left-arrow');
-    getExist(mainArrowLeft);
-    const mainArrowRight=document.querySelector('.main-image .right-arrow');
-    getExist(mainArrowRight);
-    const mainImage=document.querySelector('section.main-image');
-    getExist(mainImage);
-    const h1=document.querySelector('h1');
-    getExist(h1);
-    const pText=document.querySelector('.main-content p');
-    getExist(pText);
 
-    var mainPhotos = ["img/main1.jpeg","img/main2.jpeg","img/main3.jpeg"];
+function mainSlider() {
+    const mainArrowLeft=document.querySelector('.main-image .left-arrow');
+    if (!mainArrowLeft) return;
+    const mainArrowRight=document.querySelector('.main-image .right-arrow');
+    if (!mainArrowRight) return;
+    const mainImage=document.querySelector('section.main-image');
+    if (!mainImage) return;
+    const h1=document.querySelector('h1');
+    if (!h1) return;
+    const pText=document.querySelector('.main-content p');
+    if (!pText) return;
+
+    var mainPhotos = ["img/index/main/main1.jpeg","img/index/main/main2.jpeg","img/index/main/main3.jpeg"];
     var h1Text = ["we care about your business","we save your time & money","we share best practice"];
     var n=0;
-    //mainImage.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("${mainPhotos[n]}")`;
+
+    imagePreloader(mainPhotos);
+    mainImage.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("${mainPhotos[n]}")`;
+
+    //left arrow
     mainArrowLeft.addEventListener('click',function () {
         n--;
         !mainPhotos[n]? n=mainPhotos.length-1:null;
@@ -26,15 +37,17 @@ function mainPhoto() {
         h1.style.transform = 'translateX(-120%)'
         pText.style.transform = 'translateX(-156%)'
     });
+
+    //right arrow
     mainArrowRight.addEventListener('click',function () {
         n++;
         !mainPhotos[n]? n=0:null;
         mainImage.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("${mainPhotos[n]}")`;
         h1.style.transform = 'translateX(120%)'
         pText.style.transform = 'translateX(156%)'
-
     });
 
+    //after text transition is over function return it to the original position
     h1.addEventListener('transitionend',function () {
         h1.textContent = `${h1Text[n]}`
         h1.style.transform = 'translateX(0)'
@@ -42,40 +55,121 @@ function mainPhoto() {
     })
 }
 
-const menuBtn=document.querySelector(".mobile-nav");
+function animationKickster(el,offset,type) {
+    window.scrollY+window.innerHeight*offset>el.offsetTop? el.classList.add('animated',type):null;
+}
 
-menuBtn.addEventListener('click',function () {
-    const nav = document.querySelector('.js-mainnav');
-    nav.classList.toggle('active-menu')
+function indexAnimation() {
+    const indexFeatures = document.querySelector('section.features .animation1');
+    if (!indexFeatures) return;   
+    animationKickster(indexFeatures,.5,"fadeInLeftBig")
+}
+
+
+
+function getIndexResults() {
+    let values = []
+    const getResults = document.querySelectorAll('section.our-results .number');
+    if ((window.scrollY+window.innerHeight<getResults[0].offsetTop) || (repeat === false)) return
+    if (!getResults) return;
+    getResults.forEach(result=>{
+        values.push(parseFloat(result.textContent))
+        result.textContent='0';
+    })
+    getResults.forEach((result,i)=>{
+        var counted = 0;
+        var counter = setInterval(function () {
+            if (counted < values[i]) {
+                counted++;
+                result.textContent = counted;
+            } else {
+                clearInterval(counter);
+                animationKickster(result,.5,"bounce")
+
+            }
+        }, 10);
+    })
+    repeat = false;
+}
+
+mainSlider();
+
+var repeat = true;
+document.addEventListener('scroll',function () {
+    indexAnimation()
+    getIndexResults();
 
 });
 
-mainPhoto()
 
-// var scroll = window.scrollY;
-// var showPupup = true;
-//
-// document.addEventListener('scroll',function () {
-//     console.log(window.scrollY);
-//
-//
-//
-// //ijungti pop up kuris atsirastu viena karta ir butu galima isjungti su esc, enter ar peles paspaudimu ant juodo ekrano. Pop
-//
-// // window.scrollY<scroll? header.style.display="none" : header.style.displayr = 'block';
-//     for (x=0;x<text.length;x++){
-//         window.scrollY+window.innerHeight*0.7>text[x].offsetTop? text[x].style.opacity = '1': null ;
-//         window.scrollY+window.innerHeight*0.7>image[x].offsetTop? image[x].style.opacity = '1': null ;
-//         window.scrollY+window.innerHeight*0.7>image[x].offsetTop? image[x].style.transform = 'translateX(0%)': null ;
-//     }
-//
-//     if ((showPupup===true)&& (image[2].offsetTop<window.scrollY)) {
-//         console.log('rodom baneri')
-//         popup.style.display = 'block';
-//         mail.focus();
-//         showPupup = false;
-//     }
-//
-//
-//
-// });
+//mobile navigation menu
+menuBtn.addEventListener('click',function () {
+    const nav = document.querySelector('.js-mainnav');
+    nav.classList.toggle('active-menu')
+});
+
+function clearContent(element) {
+    while (element.firstChild) {
+        element.removeChild(element.firstChild);
+    }
+}
+
+function indexFromBlog() {
+    var url = `http://localhost/Baltic%20talents/project/website/blog.json`;
+    var blogContainer = document.querySelector('section.blog-posts .post-container');
+    clearContent(blogContainer)
+    $.getJSON(url,function (data) {
+        data.blogs.forEach(blog=>{
+            var date = `<div class="date">${blog.date}</div>`;
+            var btn = `<a href="${blog.img}" class="button">Read more</a>`;
+            var postText =`<div class="post-text">${date}<p>${blog.title}</p>${btn}</div>`;
+            var blogImg = `<div class="image-container"><img src="${blog.img}"alt="${blog.title}"></div>`;
+
+            var content = `<div class="post">${blogImg}${postText}</div>`
+            blogContainer.insertAdjacentHTML('beforeend',content);
+
+
+
+        })
+
+        // var date = `<div class="date">${data.blogs[0].date}</div>`;
+        // var btn = `<div class="button">Read more</div>`;
+        // var postText =`<div class="post-text">${date}<p>${data.blogs[0].title}</p>${btn}</div>`;
+        // var blogImg = `<div class="image-container"><img src="${data.blogs[0].img}"alt="${data.blogs[0].title}"></div>`;
+        //
+        // var content = `<div class="post">${blogImg}${postText}</div>`
+        // blogContainer.insertAdjacentHTML('beforeend',content);
+
+    })
+
+}
+
+indexFromBlog();
+
+//function indexFromBlog() {
+
+
+
+ //   console.log(data.blogs[0].title)
+    // var blogs = document.querySelectorAll();
+    //
+    // var content = `<div class="post"></div>`
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

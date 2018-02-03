@@ -4,11 +4,11 @@
 <body>
 <section class="main-image">
     <?php include('parts/header.php') ?>
-    <div class="left-arrow arrow">
+    <div class="left-arrow arrow animated flipInY">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
 
     </div>
-    <div class="right-arrow arrow">
+    <div class="right-arrow arrow animated flipInY">
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
 
     </div>
@@ -16,11 +16,11 @@
         <h1>We care about your business </h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum consectetur
             egestas. Nulla nisi nisi, rutrum vitae nunc non, bibendum euismod nulla</p>
-        <div class="button">About US</div>
+        <a class="button animated fadeInUp" href="about.php">About US</a>
     </div>
 </section>
 <section class="features">
-    <div class="container">
+    <div class="container animation1">
         <div class="wrapper">
             <img src="img/home-icon1.png" alt="features icon">
             <h3>Nibh Ridiculus</h3>
@@ -59,15 +59,15 @@
     </div>
     <div class="container">
         <div class="wrapper">
-            <img src="img/recent%20projects1.jpeg" alt="recent project image">
+            <a data-lightbox="index-recent-projects" data-title="Majestic Summer Intern Projects" href="img/index/recent/projects1_big.jpeg"><img src="img/index/recent/projects1_small.jpeg" alt="recent project image"></a>
             <i><i class="fa fa-search-plus" aria-hidden="true"></i></i>
         </div>
         <div class="wrapper">
-            <img src="img/recent%20projects2.jpeg" alt="recent project image">
+            <a data-lightbox="index-recent-projects" data-title="Hercules-2 | (The) Project on ship engine technologies" href="img/index/recent/projects2_big.jpeg"><img src="img/index/recent/projects2_small.jpeg" alt="recent project image"></a>
             <i><i class="fa fa-search-plus" aria-hidden="true"></i></i>
         </div>
         <div class="wrapper">
-            <img src="img/recent%20projects3.jpeg" alt="recent project image">
+            <a data-lightbox="index-recent-projects" data-title="Bitcoin: How High Can Bitcoin's Price Go in 2018?" href="img/index/recent/projects3_big.jpeg"><img src="img/index/recent/projects3_small.jpeg" alt="recent project image"></a>
             <i><i class="fa fa-search-plus" aria-hidden="true"></i></i>
         </div>
     </div>
@@ -90,7 +90,7 @@
             <h3>Projects</h3>
         </div>
         <div class="wrapper">
-            <div class="number">100%</div>
+            <div class="number">100</div>
             <h3>Success rate</h3>
         </div>
         <div class="wrapper">

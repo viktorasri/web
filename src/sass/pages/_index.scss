@@ -7,6 +7,7 @@ section.main-image {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  overflow: hidden;
   .left-arrow {
     left: 20px;
     @include tablet-portrait{
@@ -29,6 +30,7 @@ section.main-image {
     transition: .2s;
     cursor: pointer;
     z-index: 9999;
+    animation-delay: .5s;
     &:active{
       transform: scale(.97);
     }
@@ -90,6 +92,7 @@ section.main-image {
   }
   .button {
     @include button(#fff);
+    animation-delay: .5s;
     @include mobile{
       width: 70%;
     }
@@ -102,9 +105,11 @@ section.features{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    opacity: 0;
   }
   .wrapper{
     width: 30%;
+
     @include tablet-portrait{
       width: 47%;
     }
@@ -222,12 +227,20 @@ section.our-results{
       flex: 1 50%;
     }
     &:first-of-type{
-    margin-bottom: 60px;
+      @include tablet-portrait{
+        margin-bottom: 60px;
+      }
   }
+    &:nth-of-type(3) .number:after{
+      content: '%';
+      margin-left: 3px;
+
+    }
   }
   .number{
     color: #fff;
     font-size:50px ;
+
     @include tablet-portrait{
       font-size: 45px;
     }
@@ -265,6 +278,7 @@ section.blog-posts{
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    flex-wrap: wrap; // pridejau kai naudoju JSON
     @include tablet-portrait{
       flex-wrap: wrap;
       margin-bottom: 0;
@@ -274,6 +288,8 @@ section.blog-posts{
     width: 48%;
     background-color: #f8f8f8;
     display: flex;
+    margin-bottom: 30px; //del JSON
+
     @include tablet-portrait{
       width: 100%;
       margin-bottom: 25px;
