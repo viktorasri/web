@@ -150,28 +150,16 @@ section.features{
 //---------SECTION RECENT-PROJECTS-----------
 section.recent-projects{
   background-color: #fff;
-  padding-bottom: 40px;
   h2{
     @include section-heading-underlined;
   }
-  .container{
-    display: flex;
-    justify-content: space-between;
-    @include mobile{
-      flex-wrap: wrap;
-    }
-  }
+
 
   .wrapper{
-    width: 31%;
     position: relative;
     background-color: #0F273C;
     overflow: hidden;
     cursor: pointer;
-    margin-bottom: 20px;
-    @include mobile{
-      width: 100%;
-    }
     img{
       width: 100%;
       opacity: 0.7;
@@ -198,19 +186,11 @@ section.recent-projects{
       }
     }
   }
-  .small-chevrons-container {
-    margin: 0;
-    width: 100%;
-    i{
-      float: right;
-    }
-  }
 }
 
 //---------SECTION OUR-RESULTS-----------
 section.our-results{
   background-color: $color-blue;
-  //padding-top: 60px;
   @include tablet-portrait{
     margin-bottom: 0;
   }
@@ -274,34 +254,25 @@ section.blog-posts{
   h2{
     @include section-heading-underlined;
   }
-  .post-container{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    flex-wrap: wrap; // pridejau kai naudoju JSON
-    @include tablet-portrait{
-      flex-wrap: wrap;
-      margin-bottom: 0;
-    }
-  }
   .post{
-    width: 48%;
+    width: 100%;
     background-color: #f8f8f8;
     display: flex;
-    margin-bottom: 30px; //del JSON
-
+    //align-items: stretch;
     @include tablet-portrait{
-      width: 100%;
-      margin-bottom: 25px;
-    }
-    @include mobile{
       flex-wrap: wrap;
+      flex-direction: column;
     }
+
+  }
+  .owl-carousel .owl-stage {
+    display: flex;
+    align-items: stretch;
   }
   .image-container{
     flex: 1;
-    @include mobile{
-      flex: 1 100%;
+    @include tablet-portrait{
+      //flex: 1 100%;
     }
     img{
       width: 100%;
@@ -312,7 +283,7 @@ section.blog-posts{
   }
   .post-text{
     flex: 2;
-    padding: 0 20px;
+    padding: 0 15px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -323,18 +294,20 @@ section.blog-posts{
     text-align: left;
     @include text-regular;
     font-style: italic;
-    margin-top: 20px;
+    margin-top: 15px;
   }
   p{
     @include text-regular;
     text-align: left;
+    line-height: 1.5;
   }
   .button{
     @include button($color-blue);
     border: none;
     padding: 0;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 
   }
 }

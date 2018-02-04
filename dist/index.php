@@ -57,7 +57,7 @@
     <div class="container">
         <h2>Recent projects</h2>
     </div>
-    <div class="container">
+    <div class="container owl-carousel owl-theme">
         <div class="wrapper">
             <a data-lightbox="index-recent-projects" data-title="Majestic Summer Intern Projects" href="img/index/recent/projects1_big.jpeg"><img src="img/index/recent/projects1_small.jpeg" alt="recent project image"></a>
             <i><i class="fa fa-search-plus" aria-hidden="true"></i></i>
@@ -70,19 +70,16 @@
             <a data-lightbox="index-recent-projects" data-title="Bitcoin: How High Can Bitcoin's Price Go in 2018?" href="img/index/recent/projects3_big.jpeg"><img src="img/index/recent/projects3_small.jpeg" alt="recent project image"></a>
             <i><i class="fa fa-search-plus" aria-hidden="true"></i></i>
         </div>
-    </div>
-    <div class="container ">
-        <nav class="small-chevrons-container clearfix">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            <i class="fa fa-chevron-right" aria-hidden="true"></i>
-        </nav>
+        <div class="wrapper">
+            <a data-lightbox="index-recent-projects" data-title="Bitcoin: How High Can Bitcoin's Price Go in 2018?" href="img/index/recent/projects3_big.jpeg"><img src="img/index/recent/projects3_small.jpeg" alt="recent project image"></a>
+            <i><i class="fa fa-search-plus" aria-hidden="true"></i></i>
+        </div>
     </div>
 </section>
 <section class="our-results">
     <div class="container">
         <div class="wrapper">
             <div class="number">456</div>
-<!--            padaryti uzsikrovima po 50 +50 +50  + + + + + +-->
             <h3>happy clients</h3>
         </div>
         <div class="wrapper">
@@ -102,7 +99,7 @@
 <section class="blog-posts">
     <div class="container">
         <h2>from blog</h2>
-        <div class="post-container">
+        <div class="post-container owl-carousel owl-theme">
             <div class="post">
                 <div class="image-container">
                     <img src="img/alexis%20simpson.jpg" alt="reacent posts">
@@ -125,14 +122,7 @@
                 </div>
             </div>
         </div>
-        <nav class="small-chevrons-container">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            <i class="fa fa-chevron-right" aria-hidden="true"></i>
-        </nav>
     </div>
-
-
-
 </section>
 
 

@@ -55,7 +55,7 @@
         </div>
     </section>
 </footer>
-
-<script src="js/lightbox-plus-jquery.min.js"></script>
-<script src="js/jquery-3.3.1.min.js"></script>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+<!--<script src="js/lightbox-plus-jquery.min.js"></script>-->
 <script src="script.js"></script>
