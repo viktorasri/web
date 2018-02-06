@@ -20,11 +20,12 @@
         <p>
             Eacommodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
         </p>
-            <div class="button">OUR SERVICES</div>
+        <a href="#link-our-service" class="button">OUR SERVICES</a>
+            <div ></div>
     </div>
 </section>
 <section class="about-us-features">
-    <div class="container">
+    <div class="container animation2">
         <div class="wrapper">
             <div class="circle">
                 <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
@@ -51,7 +52,7 @@
         </div>
     </div>
 </section>
-<section class="about-us-more">
+<section id='link-our-service' class="about-us-more">
     <div class="container">
         <div class="why-choose-us">
             <h2>WHY CHOOSE US</h2>
@@ -76,22 +77,36 @@
         </div>
 </section>
 <section class="customer-testimonials">
-    <div class="container">
-        <h2>What Our Clients say</h2>
+    <div class="container"><h2>What Our Clients say</h2></div>
+    <div class="container  owl-carousel owl-theme">
         <div class="feadback-container">
             <div class="image-container">
-                <img src="img/alexis%20simpson.jpg" alt="customer image">
+                <img src="img/aboutus/alexis%20simpson.jpg" alt="customer image">
             </div>
-            <p>consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exerci
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni omnis quam veritatis! Aliquam at commodi, corporis delectus dicta enim eos et exercitationem facilis hic ipsam nemo nulla odit officia porro quidem sequi, vel voluptas voluptate voluptatum. Amet blanditiis corporis dolorem enim exercitationem, libero magni nemo, omnis optio, quos recusandae sequi.
             <span>Hary Sunio</span>
             <span>CEO</span>
-                </p>
-
+            </p>
         </div>
-        <div class="control-bar">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
+
+        <div class="feadback-container">
+            <div class="image-container">
+                <img src="img/aboutus/Catherine%20Stone.jpg" alt="customer image">
+            </div>
+            <p>consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exerci
+                <span>Catherine Stone</span>
+                <span>Marketing manager</span>
+            </p>
+        </div>
+
+        <div class="feadback-container">
+            <div class="image-container">
+                <img src="img/aboutus/Gilbert%20Reed.jpg" alt="customer image">
+            </div>
+            <p>consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est!!!!!
+                <span>Gilbert Reed</span>
+                <span>CTO</span>
+            </p>
         </div>
     </div>
 </section>
@@ -100,22 +115,22 @@
     <h2>OUR CRAZY TEAM</h2>
     <div class="wrapper-container">
         <div class="wrapper">
-            <img src="img/team1.jpg" alt="Chief technical officer">
+            <img src="img/aboutus/team1.jpg" alt="Chief technical officer">
             <h3>Jason Button <span>Chief technical officer</span></h3>
         </div>
 
         <div class="wrapper">
-            <img src="img/team1.jpg" alt="Chief technical officer">
-            <h3>John smith <span>Chief technical officer</span></h3>
+            <img src="img/aboutus/team2.jpg" alt="Chief technical officer">
+            <h3>Nichole smith <span>Chief technical officer</span></h3>
         </div>
 
         <div class="wrapper">
-            <img src="img/team1.jpg" alt="Chief technical officer">
+            <img src="img/aboutus/team3.jpg" alt="Chief technical officer">
             <h3>Kyle Ericsson <span>Chief technical officer</span></h3>
         </div>
 
         <div class="wrapper">
-            <img src="img/team1.jpg" alt="Chief technical officer">
+            <img src="img/aboutus/team4.jpg" alt="Chief technical officer">
             <h3>Eric Oldsen <span>Chief technical officer</span></h3>
         </div>
     </div>

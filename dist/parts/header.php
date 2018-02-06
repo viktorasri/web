@@ -24,7 +24,7 @@
           <nav class="js-mainnav">
               <a href="index.php">Home</a>
               <a href="about.php">About us</a>
-              <a href="pages.php">Pages</a>
+<!--              <a href="pages.php">Pages</a>-->
               <a href="projects.php">Projects</a>
               <a href="blog.php">Blog</a>
               <a href="contacts.php">contact us</a>

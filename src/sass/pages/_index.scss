@@ -258,7 +258,6 @@ section.blog-posts{
     width: 100%;
     background-color: #f8f8f8;
     display: flex;
-    //align-items: stretch;
     @include tablet-portrait{
       flex-wrap: wrap;
       flex-direction: column;

@@ -2,7 +2,7 @@
     <section class="stripe">
         <div class="container">
             <h2>GO AHEAD AND FIND OUT HOW WE CAN HELP YOU!</h2>
-            <div class="button">GET IN TOUCH</div>
+            <div class="button js-footer-btn">GET IN TOUCH</div>
         </div>
     </section>
     <section class="footer-menu">

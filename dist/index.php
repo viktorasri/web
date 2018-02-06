@@ -22,32 +22,32 @@
 <section class="features">
     <div class="container animation1">
         <div class="wrapper">
-            <img src="img/home-icon1.png" alt="features icon">
+            <img src="img/index/home-icon1.png" alt="features icon">
             <h3>Nibh Ridiculus</h3>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus etmagnis dis parturie nt montes, nascetur.</p>
         </div>
         <div class="wrapper">
-            <img src="img/home-icon2.png" alt="features icon">
+            <img src="img/index/home-icon2.png" alt="features icon">
             <h3>Nibh Ridiculus</h3>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus etmagnis dis parturie nt montes, nascetur.</p>
         </div>
         <div class="wrapper">
-            <img src="img/home-icon3.png" alt="features icon">
+            <img src="img/index/home-icon3.png" alt="features icon">
             <h3>Nibh Ridiculus</h3>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus etmagnis dis parturie nt montes, nascetur.</p>
         </div>
         <div class="wrapper">
-            <img src="img/home-icon4.png" alt="features icon">
+            <img src="img/index/home-icon4.png" alt="features icon">
             <h3>Nibh Ridiculus</h3>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus etmagnis dis parturie nt montes, nascetur.</p>
         </div>
         <div class="wrapper">
-            <img src="img/home-icon5.png" alt="features icon">
+            <img src="img/index/home-icon5.png" alt="features icon">
             <h3>Nibh Ridiculus</h3>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus etmagnis dis parturie nt montes, nascetur.</p>
         </div>
         <div class="wrapper">
-            <img src="img/home-icon6.png" alt="features icon">
+            <img src="img/index/home-icon6.png" alt="features icon">
             <h3>Nibh Ridiculus</h3>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus etmagnis dis parturie nt montes, nascetur.</p>
         </div>
@@ -59,24 +59,24 @@
     </div>
     <div class="container owl-carousel owl-theme">
         <div class="wrapper">
-            <a data-lightbox="index-recent-projects" data-title="Majestic Summer Intern Projects" href="img/index/recent/projects1_big.jpeg"><img src="img/index/recent/projects1_small.jpeg" alt="recent project image"></a>
+            <a href="img/index/recent/projects1_big.jpeg"><img src="img/index/recent/projects1_small.jpeg" alt="recent project image"></a>
             <i><i class="fa fa-search-plus" aria-hidden="true"></i></i>
         </div>
         <div class="wrapper">
-            <a data-lightbox="index-recent-projects" data-title="Hercules-2 | (The) Project on ship engine technologies" href="img/index/recent/projects2_big.jpeg"><img src="img/index/recent/projects2_small.jpeg" alt="recent project image"></a>
+            <a href="img/index/recent/projects2_big.jpeg"><img src="img/index/recent/projects2_small.jpeg" alt="recent project image"></a>
             <i><i class="fa fa-search-plus" aria-hidden="true"></i></i>
         </div>
         <div class="wrapper">
-            <a data-lightbox="index-recent-projects" data-title="Bitcoin: How High Can Bitcoin's Price Go in 2018?" href="img/index/recent/projects3_big.jpeg"><img src="img/index/recent/projects3_small.jpeg" alt="recent project image"></a>
+            <a href="img/index/recent/projects3_big.jpeg"><img src="img/index/recent/projects3_small.jpeg" alt="recent project image"></a>
             <i><i class="fa fa-search-plus" aria-hidden="true"></i></i>
         </div>
         <div class="wrapper">
-            <a data-lightbox="index-recent-projects" data-title="Bitcoin: How High Can Bitcoin's Price Go in 2018?" href="img/index/recent/projects3_big.jpeg"><img src="img/index/recent/projects3_small.jpeg" alt="recent project image"></a>
+            <a href="img/index/recent/projects3_big.jpeg"><img src="img/index/recent/projects3_small.jpeg" alt="recent project image"></a>
             <i><i class="fa fa-search-plus" aria-hidden="true"></i></i>
         </div>
     </div>
 </section>
-<section class="our-results">
+<section class="our-results js-start-counter">
     <div class="container">
         <div class="wrapper">
             <div class="number">456</div>
@@ -102,7 +102,7 @@
         <div class="post-container owl-carousel owl-theme">
             <div class="post">
                 <div class="image-container">
-                    <img src="img/alexis%20simpson.jpg" alt="reacent posts">
+                    <img src="img/blog/blog2.jpeg" alt="reacent posts">
                 </div>
                 <div class="post-text">
                     <div class="date">23 Oct 2017</div>
@@ -113,7 +113,7 @@
 
             <div class="post">
                 <div class="image-container">
-                    <img src="img/alexis%20simpson.jpg" alt="reacent posts">
+                    <img src="img/blog/blog1.jpeg" alt="reacent posts">
                 </div>
                 <div class="post-text">
                     <div class="date">23 Oct 2017</div>
