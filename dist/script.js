@@ -74,14 +74,12 @@ function aboutusAnimation() {
     const aboutusFeatures = document.querySelector('section.about-us-features .container');
 	if (!aboutusFeatures) return;
 	animationKickster(aboutusFeatures,.6,"fadeInUpBig")
-   // aboutusFeatures.style.opacity = 1;
 }
 
 //footer animation
 function footerAnimation() {
 	const stripeBtn = document.querySelector('.js-footer-btn')
 	if (!stripeBtn) return;
-	
 	animationKickster(stripeBtn,.9,"bounce")
 }
 
@@ -108,8 +106,6 @@ function getIndexResults() {
 				result.textContent = counted;
 			} else {
 				clearInterval(counter);
-				
-				
 			}
 		}, 10);
 	})
@@ -136,6 +132,72 @@ function clearContent(element) {
 	}
 }
 
+//download data from projects.json file.
+// Launches functions which fill in projects to web and enables filters
+function getProjects() {
+	var url = `data/projects.json`;
+	console.log('dd')
+	$.getJSON(url,function (data) {
+		
+		showProjects(data.projects)
+		projectsFilter(data);
+	})
+}
+getProjects();
+
+//projects page filters code
+function projectsFilter(data) {
+	
+	$(".projects-recent-projects .filter li").click(function (e) {
+		$(".projects-recent-projects .filter li").each(function () {
+			$(this).css("color","")
+		});
+		this.style.color = "#22a7f0";
+		
+		var filterValue = this.dataset.filter;
+		var matchData = data.projects.filter(project=> project.filtertags[filterValue] === "true");
+		
+		showProjects(matchData)
+	});
+}
+
+//return an array of projects filtertags property names
+function getTags(data) {
+		var tags = data.filtertags;
+		return Object.keys(tags).filter(e => tags[e] === "true" && e != "all");
+}
+
+//returns list of tags ready to insert to projects page
+function showTags(tags) {
+	return tags.map(tag=> `<li>${tag}</li>`).join('');
+}
+
+//insert projects to project page
+function showProjects(data) {
+	var gallery = document.querySelector('section.projects-recent-projects .gallery-container')
+	if (!gallery) return;
+	
+	clearContent(gallery);
+	data.forEach((project)=>{
+		var content = `
+		 			<div class="wrapper animated fadeIn">
+                <a href="${project.img.big}">
+                	<img src="${project.img.thumb}" alt="${project.title}">
+                	<div class="placer">
+                    <h3>${project.title}</h3>
+                    <ul class="taglist">
+                    	${showTags(getTags(project))}
+                    </ul>
+                </div>
+                </a>
+            </div>
+		`;
+		gallery.insertAdjacentHTML('beforeend',content);
+		
+	});
+}
+
+
 //load index page from blog section with blogs
 function indexFromBlog() {
 	var url = `data/blog.json`;
@@ -154,7 +216,6 @@ function indexFromBlog() {
 		})
 	})
 }
-
 indexFromBlog();
 
 //index recent galery setup

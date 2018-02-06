@@ -59,19 +59,19 @@
     </div>
     <div class="container owl-carousel owl-theme">
         <div class="wrapper">
-            <a href="img/index/recent/projects1_big.jpeg"><img src="img/index/recent/projects1_small.jpeg" alt="recent project image"></a>
+            <a href="img/projects/projects1_big.jpeg"><img src="img/projects/projects1_small.jpeg" alt="recent project image"></a>
             <i><i class="fa fa-search-plus" aria-hidden="true"></i></i>
         </div>
         <div class="wrapper">
-            <a href="img/index/recent/projects2_big.jpeg"><img src="img/index/recent/projects2_small.jpeg" alt="recent project image"></a>
+            <a href="img/projects/projects2_big.jpeg"><img src="img/projects/projects2_small.jpeg" alt="recent project image"></a>
             <i><i class="fa fa-search-plus" aria-hidden="true"></i></i>
         </div>
         <div class="wrapper">
-            <a href="img/index/recent/projects3_big.jpeg"><img src="img/index/recent/projects3_small.jpeg" alt="recent project image"></a>
+            <a href="img/projects/projects3_big.jpeg"><img src="img/projects/projects3_small.jpeg" alt="recent project image"></a>
             <i><i class="fa fa-search-plus" aria-hidden="true"></i></i>
         </div>
         <div class="wrapper">
-            <a href="img/index/recent/projects3_big.jpeg"><img src="img/index/recent/projects3_small.jpeg" alt="recent project image"></a>
+            <a href="img/projects/projects3_big.jpeg"><img src="img/projects/projects3_small.jpeg" alt="recent project image"></a>
             <i><i class="fa fa-search-plus" aria-hidden="true"></i></i>
         </div>
     </div>
