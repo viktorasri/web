@@ -9,6 +9,7 @@ section.blog-body{
     }
     .blog-post{
       margin-bottom: 80px;
+      opacity: 0; /*for the fadein animation*/
       @include tablet-landscape{
         margin-bottom: 60px;
       }

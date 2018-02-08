@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <?php include('parts/head.php') ?>
+
 <body>
 <?php include('parts/header.php') ?>
 <section class="stripe">
@@ -79,35 +80,35 @@
 <section class="customer-testimonials">
     <div class="container"><h2>What Our Clients say</h2></div>
     <div class="container  owl-carousel owl-theme">
-        <div class="feadback-container">
-            <div class="image-container">
+        <blockquote class="feadback-container">
+            <figure class="image-container">
                 <img src="img/aboutus/alexis%20simpson.jpg" alt="customer image">
-            </div>
+            </figure>
             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni omnis quam veritatis! Aliquam at commodi, corporis delectus dicta enim eos et exercitationem facilis hic ipsam nemo nulla odit officia porro quidem sequi, vel voluptas voluptate voluptatum. Amet blanditiis corporis dolorem enim exercitationem, libero magni nemo, omnis optio, quos recusandae sequi.
             <span>Hary Sunio</span>
             <span>CEO</span>
             </p>
-        </div>
+        </blockquote>
 
-        <div class="feadback-container">
-            <div class="image-container">
+        <blockquote class="feadback-container">
+            <figure class="image-container">
                 <img src="img/aboutus/Catherine%20Stone.jpg" alt="customer image">
-            </div>
+            </figure>
             <p>consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exerci
                 <span>Catherine Stone</span>
                 <span>Marketing manager</span>
             </p>
-        </div>
+        </blockquote>
 
-        <div class="feadback-container">
-            <div class="image-container">
+        <blockquote class="feadback-container">
+            <figure class="image-container">
                 <img src="img/aboutus/Gilbert%20Reed.jpg" alt="customer image">
-            </div>
+            </figure>
             <p>consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est!!!!!
                 <span>Gilbert Reed</span>
                 <span>CTO</span>
             </p>
-        </div>
+        </blockquote>
     </div>
 </section>
 <section class="our-team">

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <?php include('parts/head.php') ?>
+
 <body>
 <?php include('parts/header.php') ?>
 <section class="stripe">
@@ -22,38 +23,38 @@
             </ul>
         </nav>
         <div class="gallery-container">
-            <div class="wrapper">
+            <figure class="wrapper">
                 <a href="img/projects/projects1_big.jpeg">
                     <img src="img/projects/projects1_small.jpeg" alt="">
-                    <div class="placer">
+                    <figcaption class="placer">
                         <h3>name</h3>
                         <ul>
                             <li>tag</li>
                             <li>tag</li>
                             <li>tag</li>
                         </ul>
-                    </div>
+                    </figcaption>
                 </a>
 
-            </div>
-            <div class="wrapper">
+            </figure>
+            <figure class="wrapper">
                 <img src="img/projects/projects2_small.jpeg" alt="">
-            </div>
+            </figure>
             <div class="wrapper">
                 <img src="img/projects/projects3_small.jpeg" alt="">
             </div>
-            <div class="wrapper">
+            <figure class="wrapper">
                 <img src="img/projects/projects4_small.jpeg" alt="">
-            </div>
-            <div class="wrapper">
+            </figure>
+            <figure class="wrapper">
                 <img src="img/projects/projects5_small.jpeg" alt="">
-            </div>
-            <div class="wrapper">
+            </figure>
+            <figure class="wrapper">
                 <img src="img/projects/projects6_small.jpeg" alt="">
-            </div>
-            <div class="wrapper">
+            </figure>
+            <figure class="wrapper">
                 <img src="img/projects/projects7_small.jpeg" alt="">
-            </div>
+            </figure>
         </div>
     </div>
 

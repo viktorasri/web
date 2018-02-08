@@ -1,13 +1,13 @@
 // base
 @import "base/fonts";
 @import "base/reset";
-@import "base/lightgallery";
 @import "base/animation";
 // utils
 @import "utils/vars";
 @import "utils/media";
 @import "utils/mixins";
 @import "utils/gallery/theme.default";
+@import "utils/gallery/owl.carousel";
 @import "utils/generals";
 // layouts
 @import "layouts/footer";

@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
 <?php include('parts/head.php') ?>
+
 <body>
 <?php include('parts/header.php') ?>
 <section class="stripe">
     <div class="container">
         <h2>Contacts</h2>
-        <nav><a href="index.php">home</a> > <a href="about.php">Contacts</a></nav>
+        <nav><a href="index.php">home</a> > <a href="contacts.php">Contacts</a></nav>
     </div>
 </section>
 <section class="contact-form">

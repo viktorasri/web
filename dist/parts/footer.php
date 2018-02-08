@@ -2,7 +2,7 @@
     <section class="stripe">
         <div class="container">
             <h2>GO AHEAD AND FIND OUT HOW WE CAN HELP YOU!</h2>
-            <div class="button js-footer-btn">GET IN TOUCH</div>
+            <a href="contacts.php" class="button js-footer-btn">GET IN TOUCH</a>
         </div>
     </section>
     <section class="footer-menu">
@@ -45,7 +45,7 @@
                         <li class="address"><a href="https://www.google.com/maps">84 Street, City, State 24813</a></li>
                         <li class="phone"><a href="tel:+001234567890">+00 (123) 456 78 90s</a></li>
                         <li class="e-mail"><a href="mailto:info@yourcompany.com">info@yourcompany.com</a></li>
-
+                    </ul>
             </div>
         </div>
     </section>
@@ -55,7 +55,9 @@
         </div>
     </section>
 </footer>
-<script src="../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-<!--<script src="js/lightbox-plus-jquery.min.js"></script>-->
+<!--<script src="../node_modules/jquery/dist/jquery.min.js"></script>-->
+<!--<script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>-->
+
+<script src="js/jquery.js"></script>
+<script src="js/owl.carousel.js"></script>
 <script src="script.js"></script>

@@ -244,7 +244,6 @@ section.our-results{
         margin-bottom: 10px;
       }
     }
-
   }
 }
 
@@ -254,6 +253,7 @@ section.blog-posts{
   h2{
     @include section-heading-underlined;
   }
+
   .post{
     width: 100%;
     background-color: #f8f8f8;
@@ -271,7 +271,7 @@ section.blog-posts{
   .image-container{
     flex: 1;
     @include tablet-portrait{
-      //flex: 1 100%;
+      flex: 1 100%;
     }
     img{
       width: 100%;

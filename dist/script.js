@@ -84,6 +84,7 @@ function footerAnimation() {
 }
 
 //Starts counters in our results section
+//not finished, needs to be updated
 var repeat = true;
 function getIndexResults() {
 	let values = []
@@ -91,9 +92,9 @@ function getIndexResults() {
 	if (!getResults) return;
 	const triger = document.querySelector('.js-start-counter');
 	if (!triger) return;
-	
+
 	if ((window.scrollY+window.innerHeight<triger.offsetTop) || (repeat === false)) return
-	
+
 	getResults.forEach(result=>{
 		values.push(parseFloat(result.textContent))
 		result.textContent='0';
@@ -136,18 +137,37 @@ function clearContent(element) {
 // Launches functions which fill in projects to web and enables filters
 function getProjects() {
 	var url = `data/projects.json`;
-	console.log('dd')
 	$.getJSON(url,function (data) {
 		
 		showProjects(data.projects)
 		projectsFilter(data);
+		blogRecentProjects(data.projects);
+		
 	})
 }
 getProjects();
 
+//inserts 4 projects into blog page, recent projects section
+function blogRecentProjects(data) {
+	var gallery = document.querySelector('section.blog-sidebar-right .projects-container')
+	if (!gallery) return;
+	
+	clearContent(gallery);
+	data.forEach((project,i)=>{
+		if (i>3) return
+		var content = `
+					<div class="wrapper animated fadeIn">
+            			<a href="${project.img.big}">
+            				<img src="${project.img.thumb}" alt="${project.title}">
+            			</a>
+        			</div>
+		`;
+		gallery.insertAdjacentHTML('beforeend',content);
+	});
+}
+
 //projects page filters code
 function projectsFilter(data) {
-	
 	$(".projects-recent-projects .filter li").click(function (e) {
 		$(".projects-recent-projects .filter li").each(function () {
 			$(this).css("color","")
@@ -180,43 +200,156 @@ function showProjects(data) {
 	clearContent(gallery);
 	data.forEach((project)=>{
 		var content = `
-		 			<div class="wrapper animated fadeIn">
+		 			<figure class="wrapper animated fadeIn">
                 <a href="${project.img.big}">
                 	<img src="${project.img.thumb}" alt="${project.title}">
-                	<div class="placer">
+                	<figcaption class="placer">
                     <h3>${project.title}</h3>
                     <ul class="taglist">
                     	${showTags(getTags(project))}
                     </ul>
-                </div>
+                </figcaption>
                 </a>
-            </div>
+            </figure>
 		`;
 		gallery.insertAdjacentHTML('beforeend',content);
 		
 	});
 }
 
-
-//load index page from blog section with blogs
-function indexFromBlog() {
+//gets blog JSON and calls blogs functions
+function getBlog() {
 	var url = `data/blog.json`;
-	var blogContainer = document.querySelector('section.blog-posts .post-container');
-	if (!blogContainer) return
-	clearContent(blogContainer)
 	$.getJSON(url,function (data) {
-		data.blogs.forEach(blog=>{
-			var date = `<div class="date">${blog.date}</div>`;
-			var btn = `<a href="${blog.img}" class="button">Read more</a>`;
-			var postText =`<div class="post-text">${date}<p>${blog.title}</p>${btn}</div>`;
-			var blogImg = `<div class="image-container"><img src="${blog.img}"alt="${blog.title}"></div>`;
-			
-			var content = `<div class="post">${blogImg}${postText}</div>`
-			blogContainer.insertAdjacentHTML('beforeend',content);
-		})
+		indexBlogSection(data);
+		blogRecentBlogs(data);
+		blogMainBlog(data);
+		fullBlog(data);
 	})
 }
-indexFromBlog();
+getBlog();
+
+
+//load index page "from blog" section with blogs
+function indexBlogSection(data) {
+	var blogContainer = document.querySelector('section.blog-posts .post-container');
+	if (!blogContainer) return;
+	clearContent(blogContainer)
+	data.blogs.forEach((blog,i)=>{
+		if (i>3) return;
+		var date = `<time class="date">${blog.date}</time>`;
+		var btn = `<a data-id="${i}" href="blog_full_post.php" class="button js-readmore">Read more</a>`;
+		var postText =`<div class="post-text">${date}<p>${blog.title}</p>${btn}</div>`;
+		var blogImg = `<figure class="image-container"><img src="${blog.img.thumb}"alt="${blog.title}"></figure>`;
+		
+		var content = `<article class="post">${blogImg}${postText}</article>`
+		blogContainer.insertAdjacentHTML('beforeend',content);
+	})
+	blogReadMoreBtn();
+}
+
+//load blogs in blog page
+function blogMainBlog(data) {
+	var blogContainer = document.querySelector('section.blog-body .blog-content');
+	if (!blogContainer) return;
+	clearContent(blogContainer)
+	data.blogs.forEach((blog,i)=>{
+		if (i>2) return
+		var content = `
+					<article class="blog-post clearfix animated fadeIn">
+                		<figure class="blog-image-container">
+                   			<img src="${blog.img.big}" alt="${blog.title}">
+                    <time class="date-stamp"><span>DATE</span>${blog.date}</time>
+                </figure>
+                <h2>${blog.title}</h2>
+                <p>${shortenString(blog.text,350)}</p>
+                <a class="button js-readmore" data-id="${i}" href="blog_full_post.php">READ MORE</a>
+            </article>
+`;
+		blogContainer.insertAdjacentHTML('beforeend',content);
+	})
+	blogReadMoreBtn();
+}
+
+//right side "recent blogs"
+function blogRecentBlogs(data) {
+	var blogContainer = document.querySelector('.blogs-recent-posts');
+	if (!blogContainer) return;
+	clearContent(blogContainer);
+	data.blogs.forEach((blog,i)=>{
+		if (i>3) return;
+		
+		var content = `
+				<a href="blog_full_post.php" data-id="${i}">
+					<article data-id="${i}" class="recent-post clearfix animated fadeIn">
+           				<img src="${blog.img.thumb}" alt="${blog.title}">
+          				<h4>${blog.title}</h4>
+           				<h5>${blog.author}</h5>
+       				</article>
+				</a>
+		`;
+		blogContainer.insertAdjacentHTML('beforeend',content);
+	})
+}
+//listen to the blog page and Index page Read more buttons
+function blogReadMoreBtn() {
+	$('.js-readmore').click(function () {
+		var blogId = this.dataset.id;
+		localStorage.setItem('blogId',JSON.stringify(blogId))
+	})
+}
+
+
+//listen to the the right side recent blogs
+function getIdRecentBlog() {
+	$('.blogs-recent-posts').click(function (e) {
+		var blogId = e.target.parentNode.dataset.id;
+		localStorage.setItem('blogId',JSON.stringify(blogId))
+	})
+}
+getIdRecentBlog()
+
+//load full blog page data
+function fullBlog(data) {
+	var imgContainer = document.querySelector('.js-fullblog-img');
+	if (!imgContainer) return;
+	var h1 = document.querySelector('.js-h1');
+	if (!h1) return;
+	var h3 = document.querySelector('.js-h3');
+	if (!h3) return;
+	var p = document.querySelector('.full-text-content');
+	if (!p) return;
+	clearContent(imgContainer);
+	var id = fullBlogData();
+	
+	var content = `
+				<img src="${data.blogs[id].img.big}" alt="${data.blogs[id].title}">
+                <time class="date-stamp"><span>DATE</span>${data.blogs[id].date}</time>
+		`;
+	imgContainer.insertAdjacentHTML('beforeend',content);
+	h1.textContent = `"${data.blogs[id].title}"`;
+	h3.textContent = `"${data.blogs[id].author}"`;
+	var text = `<p>${data.blogs[id].text}</p>`
+	p.insertAdjacentHTML('afterbegin',text);
+}
+
+//return selected blog id
+function fullBlogData() {
+	var blogId = localStorage.getItem('blogId');
+	if (blogId) {
+		blogId = JSON.parse(blogId);
+	}
+	return blogId
+}
+
+
+//shorten text string and adds sufix at the end
+function shortenString(string,lenght) {
+	var sufix = " [...]";
+	string.length<lenght? sufix='' : null;
+	var newString = string.substring(0,lenght-sufix.length);
+	return newString+sufix;
+}
 
 //index recent galery setup
 $(document).ready(function(){
